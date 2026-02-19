@@ -1,0 +1,8 @@
+numpy
+scipy
+sympy
+matplotlib
+PySide6
+numba
+scikit-image
+plotly
