@@ -24,12 +24,12 @@ Unlike traditional monolithic editors, Mathex is architected as a **Plugin-Based
 2.  **The IDE Plugins (`ides`)**
     The platform currently hosts two powerful tools:
 
-    * **📘 Tool 1: Mathex (MATLAB® Compatible)**
+    * **🖥️ Tool 1: Mathex (MATLAB® Compatible)**
         * A transcript-based IDE that runs `.m` files.
         * Features a dedicated **Workspace Inspector**, **Command Window**, and **Variable Viewer**.
         * Powered by a custom **Transpiler** that converts MATLAB syntax to Python on the fly.
     
-    * **🐺 Tool 2: Mathematica (Wolfram-Mathematica® Style)**
+    * **🧮 Tool 2: Mathematica (Wolfram-Mathematica® Style)**
         * A symbolic-first environment designed for high-level algebraic manipulation.
         * Integrates deep symbolic computation capabilities directly into the platform.
 
