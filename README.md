@@ -1,4 +1,4 @@
-# MESC - Mathematical Enviornment for Scientific Computation 
+# MESC - Modular Enviornment for Scientific Computation 
 
 **MESC** is a modular, high-fidelity scientific computing platform designed to unify various STEM workflows into a single, professional interface. It serves as a container for multiple research tools, combining the familiar syntax of legacy tools (like MATLAB) with the modern power of the **Python** ecosystem (NumPy, SciPy, SymPy, PySide6, numba, scikit-image, plotly).
 
