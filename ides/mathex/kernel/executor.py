@@ -189,10 +189,15 @@ def execute(code: str, session: KernelSession, breakpoints: list = None):
             if value is not None:
                 session.globals["ans"] = value
                 if not suppress:
-                    if hasattr(value, "_data"):
-                        print(f"ans =\n{value}")
+                    if isinstance(value, bool):
+                        print(f"ans =\n\n  logical\n\n     {1 if value else 0}")
+                    elif isinstance(value, list):
+                        from shared.symbolic_core.arrays import MatlabArray
+                        print(f"ans =\n\n{MatlabArray(value)}")
+                    elif hasattr(value, "_data"):
+                        print(f"ans =\n\n{value}")
                     else:
-                        print(f"ans = {value}")
+                        print(f"ans =\n\n     {value}")
             return None
 
         # ------------------------------------------------
@@ -209,10 +214,15 @@ def execute(code: str, session: KernelSession, breakpoints: list = None):
             if isinstance(target, ast.Name):
                 name = target.id
                 val = session.globals.get(name)
-                if hasattr(val, "_data"):
-                    print(f"{name} =\n{val}")
+                if isinstance(val, bool):
+                    print(f"{name} =\n\n  logical\n\n     {1 if val else 0}")
+                elif isinstance(val, list):
+                    from shared.symbolic_core.arrays import MatlabArray
+                    print(f"{name} =\n\n{MatlabArray(val)}")
+                elif hasattr(val, "_data"):
+                    print(f"{name} =\n\n{val}")
                 else:
-                    print(f"{name} = {val}")
+                    print(f"{name} =\n\n     {val}")
 
     except NameError as e:
         # Disable tracer during error handling
